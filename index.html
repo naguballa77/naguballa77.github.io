@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,53 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagu's Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
       line-height: 1.6;
     }
+
     header {
       background: #1e293b;
       color: #f8fafc;
       padding: 20px;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
       color: #38bdf8;
     }
+
     header p {
       font-size: 1.2rem;
       color: #94a3b8;
     }
+
+    nav {
+      background: #0f172a;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
     section {
-      padding: 30px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: auto;
     }
+
     h2 {
       color: #38bdf8;
+      margin-bottom: 20px;
       border-bottom: 2px solid #38bdf8;
       display: inline-block;
       padding-bottom: 5px;
     }
+
     ul {
-      list-style-type: square;
+      list-style: square;
       padding-left: 20px;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .contact {
       text-align: center;
-      margin-top: 20px;
     }
+
     .contact a {
       color: #38bdf8;
       text-decoration: none;
       font-weight: bold;
     }
+
     footer {
       background: #1e293b;
       color: #94a3b8;
@@ -59,15 +111,32 @@
       padding: 15px;
       margin-top: 20px;
     }
+
+    /* Responsive text */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Hi 👋, I’m Nagu</h1>
-    <p>Computer Engineering Student | Ethical Hacker (in progress) | Web Developer</p>
+    <p>CYBER SECURITY Student | Ethical Hacker (in progress) | Web Developer</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I am passionate about cybersecurity, ethical hacking, and building innovative projects in robotics and web development.
@@ -75,16 +144,25 @@
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><b>Drone Security System</b> – Researching drone network safety & intrusion detection.</li>
-      <li><b>Web Development</b> – Built responsive websites using HTML, CSS, and JavaScript.</li>
-      <li><b>Python & C Programs</b> – Solved real-world problems and automation tasks.</li>
-    </ul>
+    <div class="grid">
+      <div class="card">
+        <h3>Drone Security System</h3>
+        <p>Researching drone network safety & intrusion detection.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Built responsive websites using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Python & C Programs</h3>
+        <p>Created real-world solutions and automation scripts.</p>
+      </div>
+    </div>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Programming: C, C++, Python, JavaScript</li>
@@ -94,17 +172,14 @@
     </ul>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:naguballa77@proton.me">naguballa77@proton.me</a></p>
-    <p>GitHub: <a href="https://github.com/naguballa77" target="_blank">github.com/naguballa77</a></p>
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
   </section>
 
   <footer>
     <p>© 2025 Nagu. Built with ❤️ on GitHub Pages.</p>
-    @naguballa77
   </footer>
 </body>
 </html>
-
-
